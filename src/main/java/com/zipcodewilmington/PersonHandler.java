@@ -14,7 +14,16 @@ public class PersonHandler {
     // simple lines of code...
     
     public String whileLoop() {
+
         String result = "";
+        int counter = 0;
+        while (counter < personArray.length){
+            String currentPerson = "";
+            currentPerson = personArray[counter].toString();
+            result = result.concat(currentPerson);
+            counter++;
+        }
+
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -30,7 +39,12 @@ public class PersonHandler {
 
 
     public String forLoop() {
+
         String result = "";
+        for (int i = 0; i < personArray.length; i++){
+            String current = personArray[i].toString();
+            result = result.concat(current);
+        }
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -51,6 +65,11 @@ public class PersonHandler {
         String result = "";
         // identify array's type
         // identify array's variable-name
+        for (Person person: personArray) {
+            String current = "";
+            current = person.toString();
+            result = result.concat(current);
+        }
 
         // use the above discoveries to declare for-each-loop signature
             // begin loop
